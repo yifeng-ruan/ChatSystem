@@ -12,10 +12,10 @@ Client B (localhost: 8081)
 3. create a new process and exec `npm run build-clientA`
 4. create a new process and exec `npm run build-clientB`
 
-## work Had done
+## work done
 1. chat system by using koa-socket and its UI part
 
-## remained work
+## work remaining
 1. integrate Bonjour feature
 2. integrate docker
 3. testing
