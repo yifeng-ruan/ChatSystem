@@ -1,0 +1,32 @@
+{
+  "name": "funicular-13yuan",
+  "version": "1.0.0",
+  "description": "This exercise will demonstrate how well you can apply tech you already know, such as Docker, Redis, and NodeJS, and add in some new tech as well. These new components are Jest and Bonjour. We will also look at Chaos Monkey testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-clientA": "lerna run build-clientA --stream",
+    "build-clientB": "lerna run build-clientB --stream",
+    "build-server": "lerna run build-server --stream",
+    "build": "npm run build-server && npm run build-ClientA && npm run build-ClientB",
+    "bootstrap": "npm install && lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimbaker/funicular-13Yuan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimbaker/funicular-13Yuan/issues"
+  },
+  "homepage": "https://github.com/jimbaker/funicular-13Yuan#readme",
+  "dependencies": {
+    "bonjour": "^3.5.0",
+    "koa": "^2.7.0",
+    "koa-socket-2": "^1.0.17"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.1"
+  }
+}
