@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
+  mode: 'none',
   entry: './src/index.js',
   module: {
     rules: [
@@ -18,12 +19,5 @@ module.exports = {
     path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  devServer: {
-    contentBase: './dist',
-    hot: true
   }
 };

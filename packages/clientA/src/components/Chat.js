@@ -20,9 +20,6 @@ class Chat extends Component {
                 return {text: pre.text + " " + data.message}
             });
         });
-        // var bonjour = require('bonjour')()
-        // // advertise an HTTP server on port 3000
-        // bonjour.publish({ name: 'Client A', type: 'http', port: 8080 })
     }
     onClick() {
         const msg = "ClientA: " + this.refs.input.value;

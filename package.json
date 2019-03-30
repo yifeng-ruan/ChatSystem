@@ -24,6 +24,7 @@
   "dependencies": {
     "bonjour": "^3.5.0",
     "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
     "koa-socket-2": "^1.0.17"
   },
   "devDependencies": {
