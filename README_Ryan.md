@@ -11,6 +11,7 @@ Client B (localhost: 5001)
 2. npm run build-server
 3. create a new process and exec `npm run build-clientA`
 4. create a new process and exec `npm run build-clientB`
+5. create Redis server with port of 6380
 
 You can open the following link to see the features that finished.
 
