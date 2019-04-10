@@ -36,7 +36,7 @@ services:
     volumes:
       - redis-data:/data
     networks:
-      - om-net
+      app_net:
     ports:
       - "6380:6380"
 networks:
