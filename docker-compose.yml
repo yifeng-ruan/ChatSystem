@@ -9,7 +9,7 @@ services:
     command: ["npm", "run", "build-server"]
     networks:
       app_net:
-  clientA:
+  client-a:
     build: ./packages/clientA/
     links:
       - redis
@@ -18,7 +18,7 @@ services:
     command: ["npm", "run", "build-clientA"]
     networks:
       app_net:
-  clientB:
+  client-b:
     links:
       - redis
     build: ./packages/clientB/
