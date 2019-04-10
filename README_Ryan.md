@@ -15,9 +15,15 @@ Client B (localhost: 5001)
 
 You can open the following link to see the features that finished.
 
-clientA: http://localhost:4001/
-clientB: http://localhost:5001/
-server available services: http://localhost:3000/available
+clientA: http://{localhost}:4001/
+clientB: http://{localhost}:5001/
+server available services: http://{localhost}:3000/available
+
+## Docker compose
+You can also run this project by using docker compose
+1. git pull this project
+2. run `docker-compose up -d`
+3. then visit above link, and this chat is working.
 
 ## work done
 1. chat system by using koa-socket and its UI part
