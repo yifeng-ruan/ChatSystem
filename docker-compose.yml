@@ -1,0 +1,42 @@
+version: '3'
+services:
+  server:
+    build: ./packages/server/
+    links:
+      - redis
+    ports:
+      - "3000:3000"
+    command: ["npm", "run", "build-server"]
+    networks:
+      app_net:
+  clientA:
+    build: ./packages/clientA/
+    links:
+      - redis
+    ports:
+      - "4001:4001"
+    command: ["npm", "run", "build-clientA"]
+    networks:
+      app_net:
+  clientB:
+    links:
+      - redis
+    build: ./packages/clientB/
+    ports:
+      - "5001:5001"
+    command: ["npm", "run", "build-clientB"]
+    networks:
+      app_net:
+  redis:
+    image: redis
+    container_name: redis-6380
+    ports:
+    - 6380:6380
+    volumes:
+      - redis-data:/data
+    networks:
+      app_net:
+networks:
+  app_net:
+volumes:
+  redis-data:
