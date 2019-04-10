@@ -28,14 +28,17 @@ services:
     networks:
       app_net:
   redis:
-    image: redis
-    container_name: redis-6380
-    ports:
-    - 6380:6380
+    image: "redis"
+    restart: always
+    container_name: redis
+    sysctls:
+      net.core.somaxconn: '511'
     volumes:
       - redis-data:/data
     networks:
-      app_net:
+      - om-net
+    ports:
+      - "6380:6380"
 networks:
   app_net:
 volumes:

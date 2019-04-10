@@ -23,7 +23,7 @@ server available services: http://localhost:3000/available
 1. chat system by using koa-socket and its UI part
 2. integrate Bonjour feature
 3. ioredis
+4. integrate docker
 
 ## work remaining
-1. integrate docker
-2. testing
+1. testing
