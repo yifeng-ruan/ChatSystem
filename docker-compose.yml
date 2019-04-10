@@ -4,6 +4,8 @@ services:
     build: ./packages/server/
     links:
       - redis
+    depends_on:
+      - redis
     ports:
       - "3000:3000"
     command: ["npm", "run", "build-server"]
