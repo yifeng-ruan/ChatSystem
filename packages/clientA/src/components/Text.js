@@ -1,16 +1,22 @@
-import styled from 'styled-components'
-
-
 import React, { Component} from 'react';
+import Linkify from 'react-linkify';
 
 class Text extends Component {
     constructor(props) {
         super(props);
     }
+    renderComponent({Type, Value}) {
+        switch (Type) {
+            case "img":
+                return <img src={Value}  />
+            default:
+                return <Linkify properties={{ target: '_blank' }}>{Value}</Linkify>
+        }
+    }
     render() {
         return (
             <div>
-            <textarea cols="40" rows="20" value={this.props.Value} ></textarea>
+                {this.renderComponent(this.props)}
             </div>
         );
     }
